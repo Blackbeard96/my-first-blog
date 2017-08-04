@@ -4,8 +4,19 @@
 </head>
 
 <center>
-    <h1>Blackbeard's Blog</h1>
+  <div>
+          <h1><a href="">Blackbeard's Blog</a></h1>
+      </div>
+<h3>Zehahaha</h3>
+      <div>
 
-    <h3>Zehahahahahaaa....</h3>
+        {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+  </div>
 </center>
 </html>
